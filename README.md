@@ -30,6 +30,7 @@ curl http://localhost:8080
 Что сделать чтобы работало не под рутом
 
 pid        /tmp/nginx.pid;
+```
 http {
     client_body_temp_path /tmp/client_temp;
     proxy_temp_path       /tmp/proxy_temp_path;
@@ -37,7 +38,8 @@ http {
     uwsgi_temp_path       /tmp/uwsgi_temp;
     scgi_temp_path        /tmp/scgi_temp;
 ...
-}
+} 
+```
 
 Запушим в докерхаб
 docker build -t m0rgulnet/web:1.0 .
