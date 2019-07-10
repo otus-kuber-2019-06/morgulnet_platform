@@ -24,7 +24,7 @@ Dockerfile
 FROM nginx
 COPY static-html-directory /usr/share/nginx/html
 docker build -t some-content-nginx .
-docker run --name some-nginx -d -p 8080:80 some-content-nginx
+docker run --name web1.0 -d -p 8080:80 m0rgulnet/web:1.0
 curl http://localhost:8080
 
 Что сделать чтобы работало не под рутом
@@ -38,4 +38,10 @@ http {
     scgi_temp_path        /tmp/scgi_temp;
 ...
 }
+
+Запушим в докерхаб
+docker build -t m0rgulnet/web:1.0 .
+docker push m0rgulnet/web:1.0
+
+
 
