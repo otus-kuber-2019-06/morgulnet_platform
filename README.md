@@ -45,5 +45,7 @@ http {
 docker build -t m0rgulnet/web:1.0 .
 docker push m0rgulnet/web:1.0
 
+Создал манифест манифест web-pod.yaml
 
-
+Проверил работу 
+kubectl port-forward pods/web 8000:8000
