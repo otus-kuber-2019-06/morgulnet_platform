@@ -1,5 +1,39 @@
 # morgulnet_platform
-ДЗ-1
+ДЗ-2 Kubernetes Security
+
+Task1
+01-sa-bob.yaml
+ Создаем Service Account bob
+02-ClusterRoleBinding-bob.yaml
+ Даем бобу роль admin в рамках всего кластера
+03-sa-dave.yaml
+Создем Service Account dave без доступа к кластеру
+
+Task02
+01-namespace-prometheus.yaml
+ Создать Namespace prometheus
+02-sa-carol.yaml
+ Создать Service Account carol Namespace prometheus
+03-ClusterRole-Promeththeus.yaml
+ Создаем роль возможность делать get, list, watch в отношении Pods всего кластера
+04-ClusterRoleBinding-SaInPromeththeus.yaml
+ Привязать всем Service Account в Namespace prometheus роль get-list-watch-prometheus
+
+
+Task03
+01-namespace-dev.yaml
+ Создать Namespace dev
+cat 02-sa-Jane-ns-dev.yaml
+ Создать Service Account jane в Namespace dev
+cat 03-RoleBinding-Jane-ns-dev.yaml
+ Дать jane роль admin в рамках Namespace dev
+04-sa-Ken-ns-dev.yaml
+ Создать Service Account ken в Namespace dev
+05-RoleBinding-Ken-ns-dev.yaml
+ Дать ken роль view в рамках Namespace dev
+
+ДЗ-1 Введение в Kubernetes
+
 Создать Dockerfile, в котором будет описан образ:
 1. Запускающий web-сервер на порту 8000 (можно использовать
 любой способ)
