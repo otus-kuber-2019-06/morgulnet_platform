@@ -1,4 +1,11 @@
 # morgulnet_platform
+ДЗ-4 Kubernetes Volumes
+Развернули S3 хранилище в кубернетес.
+Создали сервис.
+Создали секреты.
+Проверил работу через web ui, использовал KubeForwarder.
+ Создал бакет ,залил файл и скачал.
+
 ДЗ-2 Kubernetes Security
 
 Task1
